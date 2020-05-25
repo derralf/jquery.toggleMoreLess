@@ -1,0 +1,83 @@
+* {
+ box-sizing:border-box
+}
+
+
+/* ================================ 
+   mandatory styles
+   ================================ */ 
+
+.toggleHeight {
+	overflow: hidden;
+	position: relative;
+}
+
+
+.btn-showmoreless {
+	position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9; /* change to your needs */ 
+}
+
+
+
+.btn-showmoreless.hidden {
+	display: none;
+}
+
+.toggleHeight .btn-showmoreless .showLessTxt {
+    display: none;
+}
+.toggleHeight .btn-showmoreless .showMoreTxt {
+	display: block;
+}
+
+.toggleHeight.is--expanded .btn-showmoreless .showMoreTxt {
+    display: none;
+}
+.toggleHeight.is--expanded .btn-showmoreless .showLessTxt {
+    display: block;
+}
+
+
+/* ================================ 
+   styles to be adapted
+   ================================ */ 
+
+.some-container-classes {
+	padding: 10px;
+	border: 1px solid #000;
+}
+
+
+.btn-showmoreless {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    
+    background: transparent;
+    background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%); 
+    
+    color: red;
+    font-size: 18px;
+    text-align: center;
+    border: 0;
+
+    padding-top: 45px;
+    padding-bottom: 13px;
+    outline: 0;
+}
+
+.btn-showmoreless .showMoreTxt:after {
+	content: " \2193";
+}
+.btn-showmoreless .showLessTxt:after {
+	content: " \2191";
+}
+
+
